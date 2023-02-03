@@ -5,8 +5,9 @@
                    displayName="Header Files"
                    projectFiles="true">
       <itemPath>LCD.h</itemPath>
-      <itemPath>oscilador.h</itemPath>
       <itemPath>SPI.h</itemPath>
+      <itemPath>oscilador.h</itemPath>
+      <itemPath>setupADC.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -17,8 +18,9 @@
                    projectFiles="true">
       <itemPath>main.c</itemPath>
       <itemPath>LCD.c</itemPath>
-      <itemPath>oscilador.c</itemPath>
       <itemPath>SPI.c</itemPath>
+      <itemPath>oscilador.c</itemPath>
+      <itemPath>setupADC.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

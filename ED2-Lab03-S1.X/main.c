@@ -37,82 +37,72 @@
 #include <stdint.h>
 #include <stdio.h>
 #include "SPI.h"
-#include "LCD.h"
 #include "oscilador.h"
+#include "setupADC.h"
 
 #define _XTAL_FREQ 4000000
+
 void portsetup(void);
+void setup_portb(void);
 
 uint8_t lecADC;
-uint8_t lecADC2;
 uint8_t cont;
-float conver;
-char valADC[3];
-char contador[3];
+char dato;
+
 /*
  * 
  */
-
-void main(void) {
-    setupINTOSC(6);     //Oscilador a 1MHz
-    portsetup();
-    Lcd_Init();
-    Lcd_Clear();
-    Lcd_Set_Cursor(1,2);
-    Lcd_Write_String("S1:   S2:   S3:"); 
+void __interrupt() isr (void){
+    if(SSPIF == 1){
+        spiWrite(lecADC);
+        SSPIF = 0;
+    }
+    if (INTCONbits.RBIF){           // Revisa si hay interrupción del puerto B
+        if (PORTBbits.RB7 == 0)     // Revisa si se presionó RB7 (cambio modo)
+        {
+            __delay_ms(20);
+            cont = cont + 1;
+        }
+        if(PORTBbits.RB6 == 0){     // Revisa si se presionó RB6 (posición +1)
+            __delay_ms(20);
+            cont = cont - 1;
+        }
+        RBIF = 0;
+    }
+}
     
+void main(void) {
+    setupINTOSC(6);     // Oscilador a 4MHz
+    portsetup();
+    setup_portb();
+    ADC_config(0x01);   // Configurar canal analógico 0
+    cont = 0;
+            
     while(1){
-        
-        PORTCbits.RC2 = 0;  // Seleccionar Slave 1
-        PORTCbits.RC1 = 1;
-        __delay_ms(1);
-        spiWrite(0);
-        lecADC = spiRead(); // Guarda el dato de la lectura
-        
-        PORTCbits.RC2 = 1;
-        PORTCbits.RC1 = 0;
-        __delay_ms(1);
-        spiWrite(0);
-        lecADC2 = spiRead();
-        
-//        PORTCbits.RC2 = 0;  // Seleccionar Slave 1
-//        PORTCbits.RC1 = 1;
-//        __delay_ms(1);   
-//        spiWrite('c');
-//        cont = spiRead();
-//        PORTB = cont;
-        
-        
-        conver = (lecADC*5.0)/255;
-        sprintf(valADC, "%.2f", conver);
-        Lcd_Set_Cursor(2,1);
-        Lcd_Write_String(valADC);
-        
-        
-//        sprintf(contador, "%.2f", cont);
-//        Lcd_Set_Cursor(2,7);
-//        Lcd_Write_String(contador);
-        
-        conver = (lecADC2*5.0)/255;
-        sprintf(valADC, "%.2f", conver);
-        Lcd_Set_Cursor(2,13);
-        Lcd_Write_String(valADC);
-        
+        lecADC = ADC_read(0);
+        PORTD = cont;
+        __delay_ms(5);
     }
 }
 
 void portsetup(){
-    ANSEL = 0;
-    ANSELH = 0;
     TRISD = 0;
     PORTD = 0;
-    TRISB = 0;
-    PORTB = 0;
+    
+    INTCONbits.GIE = 1;         // Habilitamos interrupciones
+    INTCONbits.PEIE = 1;        // Habilitamos interrupciones PEIE
+    PIR1bits.SSPIF = 0;         // Borramos bandera interrupción MSSP
+    PIE1bits.SSPIE = 1;         // Habilitamos interrupción MSSP
+    TRISAbits.TRISA5 = 1;       // Slave Select
+    spiInit(SPI_SLAVE_SS_EN, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
+   
+}
 
-    TRISC = 0;
-    TRISCbits.TRISC4 = 1;
-    PORTCbits.RC2 = 1;  // Seleccionar Slave 1
-    PORTCbits.RC1 = 1;
-    spiInit(SPI_MASTER_OSC_DIV4, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
-
+void setup_portb(void){
+    TRISB = 0b11000000;
+    INTCONbits.RBIE = 1;    // Habilita interrupción del puerto B
+    INTCONbits.RBIF = 0;    // Apaga la bandera de interrupción del puerto B
+    IOCB = 0b11000000;      // Habilita la interrupción en cambio (IoC)
+    WPUB = 0b11000000;      // Habilita el Weak Pull-Up en el puerto B
+    OPTION_REGbits.nRBPU = 0;   // Deshabilita el bit de RBPU
 }
