@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 16F887 ]
 [d frameptr 0 ]
-"97 D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
+"108 D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
 [e E1349 . `uc
 SPI_MASTER_OSC_DIV4 32
 SPI_MASTER_OSC_DIV16 33
@@ -59,13 +59,13 @@ SPI_ACTIVE_2_IDLE 64
 [v _Lcd_Cmd Lcd_Cmd `(v  1 e 1 0 ]
 "83
 [v _Lcd_Write_Char Lcd_Write_Char `(v  1 e 1 0 ]
-"55 D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
+"58 D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
 [v _isr isr `II(v  1 e 1 0 ]
-"74
+"86
 [v _main main `(v  1 e 1 0 ]
-"88
+"100
 [v _portsetup portsetup `(v  1 e 1 0 ]
-"101
+"112
 [v _setup_portb setup_portb `(v  1 e 1 0 ]
 "10 D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\oscilador.c
 [v _setupINTOSC setupINTOSC `(v  1 e 1 0 ]
@@ -77,9 +77,9 @@ SPI_ACTIVE_2_IDLE 64
 [v _spiInit spiInit `(v  1 e 1 0 ]
 "29
 [v _spiReceiveWait spiReceiveWait `(v  1 s 1 spiReceiveWait ]
-"34
-[v _spiWrite spiWrite `(v  1 e 1 0 ]
-[s S506 . 1 `uc 1 RA0 1 0 :1:0 
+"47
+[v _spiRead spiRead `(uc  1 e 1 0 ]
+[s S507 . 1 `uc 1 RA0 1 0 :1:0 
 `uc 1 RA1 1 0 :1:1 
 `uc 1 RA2 1 0 :1:2 
 `uc 1 RA3 1 0 :1:3 
@@ -89,9 +89,9 @@ SPI_ACTIVE_2_IDLE 64
 `uc 1 RA7 1 0 :1:7 
 ]
 "184 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h
-[u S515 . 1 `S506 1 . 1 0 ]
-[v _PORTAbits PORTAbits `VES515  1 e 1 @5 ]
-[s S60 . 1 `uc 1 RB0 1 0 :1:0 
+[u S516 . 1 `S507 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES516  1 e 1 @5 ]
+[s S61 . 1 `uc 1 RB0 1 0 :1:0 
 `uc 1 RB1 1 0 :1:1 
 `uc 1 RB2 1 0 :1:2 
 `uc 1 RB3 1 0 :1:3 
@@ -101,11 +101,11 @@ SPI_ACTIVE_2_IDLE 64
 `uc 1 RB7 1 0 :1:7 
 ]
 "246
-[u S69 . 1 `S60 1 . 1 0 ]
-[v _PORTBbits PORTBbits `VES69  1 e 1 @6 ]
+[u S70 . 1 `S61 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES70  1 e 1 @6 ]
 "353
 [v _PORTD PORTD `VEuc  1 e 1 @8 ]
-[s S288 . 1 `uc 1 RD0 1 0 :1:0 
+[s S289 . 1 `uc 1 RD0 1 0 :1:0 
 `uc 1 RD1 1 0 :1:1 
 `uc 1 RD2 1 0 :1:2 
 `uc 1 RD3 1 0 :1:3 
@@ -115,9 +115,9 @@ SPI_ACTIVE_2_IDLE 64
 `uc 1 RD7 1 0 :1:7 
 ]
 "370
-[u S297 . 1 `S288 1 . 1 0 ]
-[v _PORTDbits PORTDbits `VES297  1 e 1 @8 ]
-[s S28 . 1 `uc 1 RBIF 1 0 :1:0 
+[u S298 . 1 `S289 1 . 1 0 ]
+[v _PORTDbits PORTDbits `VES298  1 e 1 @8 ]
+[s S29 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 RBIE 1 0 :1:3 
@@ -127,13 +127,13 @@ SPI_ACTIVE_2_IDLE 64
 `uc 1 GIE 1 0 :1:7 
 ]
 "483
-[s S37 . 1 `uc 1 . 1 0 :2:0 
+[s S38 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 TMR0IE 1 0 :1:5 
 ]
-[u S42 . 1 `S28 1 . 1 0 `S37 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES42  1 e 1 @11 ]
+[u S43 . 1 `S29 1 . 1 0 `S38 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES43  1 e 1 @11 ]
 [s S113 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
@@ -151,13 +151,13 @@ SPI_ACTIVE_2_IDLE 64
 [v _SSPCON SSPCON `VEuc  1 e 1 @20 ]
 "1239
 [v _ADRESH ADRESH `VEuc  1 e 1 @30 ]
-[s S560 . 1 `uc 1 ADON 1 0 :1:0 
+[s S561 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 GO_nDONE 1 0 :1:1 
 `uc 1 CHS 1 0 :4:2 
 `uc 1 ADCS 1 0 :2:6 
 ]
 "1277
-[s S565 . 1 `uc 1 . 1 0 :1:0 
+[s S566 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO 1 0 :1:1 
 `uc 1 CHS0 1 0 :1:2 
 `uc 1 CHS1 1 0 :1:3 
@@ -166,14 +166,14 @@ SPI_ACTIVE_2_IDLE 64
 `uc 1 ADCS0 1 0 :1:6 
 `uc 1 ADCS1 1 0 :1:7 
 ]
-[s S574 . 1 `uc 1 . 1 0 :1:0 
+[s S575 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 nDONE 1 0 :1:1 
 ]
-[s S577 . 1 `uc 1 . 1 0 :1:0 
+[s S578 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO_DONE 1 0 :1:1 
 ]
-[u S580 . 1 `S560 1 . 1 0 `S565 1 . 1 0 `S574 1 . 1 0 `S577 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES580  1 e 1 @31 ]
+[u S581 . 1 `S561 1 . 1 0 `S566 1 . 1 0 `S575 1 . 1 0 `S578 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES581  1 e 1 @31 ]
 [s S199 . 1 `uc 1 PS 1 0 :3:0 
 `uc 1 PSA 1 0 :1:3 
 `uc 1 T0SE 1 0 :1:4 
@@ -215,23 +215,23 @@ SPI_ACTIVE_2_IDLE 64
 "1719
 [u S140 . 1 `S132 1 . 1 0 ]
 [v _PIE1bits PIE1bits `VES140  1 e 1 @140 ]
-[s S473 . 1 `uc 1 SCS 1 0 :1:0 
+[s S474 . 1 `uc 1 SCS 1 0 :1:0 
 `uc 1 LTS 1 0 :1:1 
 `uc 1 HTS 1 0 :1:2 
 `uc 1 OSTS 1 0 :1:3 
 `uc 1 IRCF 1 0 :3:4 
 ]
 "1883
-[s S479 . 1 `uc 1 . 1 0 :4:0 
+[s S480 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 IRCF0 1 0 :1:4 
 `uc 1 IRCF1 1 0 :1:5 
 `uc 1 IRCF2 1 0 :1:6 
 ]
-[u S484 . 1 `S473 1 . 1 0 `S479 1 . 1 0 ]
-[v _OSCCONbits OSCCONbits `VES484  1 e 1 @143 ]
+[u S485 . 1 `S474 1 . 1 0 `S480 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES485  1 e 1 @143 ]
 "2178
 [v _SSPSTAT SSPSTAT `VEuc  1 e 1 @148 ]
-[s S364 . 1 `uc 1 BF 1 0 :1:0 
+[s S365 . 1 `uc 1 BF 1 0 :1:0 
 `uc 1 UA 1 0 :1:1 
 `uc 1 R_nW 1 0 :1:2 
 `uc 1 S 1 0 :1:3 
@@ -241,53 +241,53 @@ SPI_ACTIVE_2_IDLE 64
 `uc 1 SMP 1 0 :1:7 
 ]
 "2232
-[s S373 . 1 `uc 1 . 1 0 :2:0 
+[s S374 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D 1 0 :1:5 
 ]
-[s S378 . 1 `uc 1 . 1 0 :2:0 
+[s S379 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 I2C_READ 1 0 :1:2 
 `uc 1 I2C_START 1 0 :1:3 
 `uc 1 I2C_STOP 1 0 :1:4 
 `uc 1 I2C_DATA 1 0 :1:5 
 ]
-[s S384 . 1 `uc 1 . 1 0 :2:0 
+[s S385 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nW 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nA 1 0 :1:5 
 ]
-[s S389 . 1 `uc 1 . 1 0 :2:0 
+[s S390 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nWRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nADDRESS 1 0 :1:5 
 ]
-[s S394 . 1 `uc 1 . 1 0 :2:0 
+[s S395 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_W 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_A 1 0 :1:5 
 ]
-[s S399 . 1 `uc 1 . 1 0 :2:0 
+[s S400 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 READ_WRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 DATA_ADDRESS 1 0 :1:5 
 ]
-[u S404 . 1 `S364 1 . 1 0 `S373 1 . 1 0 `S378 1 . 1 0 `S384 1 . 1 0 `S389 1 . 1 0 `S394 1 . 1 0 `S399 1 . 1 0 ]
-[v _SSPSTATbits SSPSTATbits `VES404  1 e 1 @148 ]
+[u S405 . 1 `S365 1 . 1 0 `S374 1 . 1 0 `S379 1 . 1 0 `S385 1 . 1 0 `S390 1 . 1 0 `S395 1 . 1 0 `S400 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES405  1 e 1 @148 ]
 "2347
 [v _WPUB WPUB `VEuc  1 e 1 @149 ]
 "2417
 [v _IOCB IOCB `VEuc  1 e 1 @150 ]
-[s S606 . 1 `uc 1 . 1 0 :4:0 
+[s S607 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 VCFG0 1 0 :1:4 
 `uc 1 VCFG1 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 ADFM 1 0 :1:7 
 ]
 "2992
-[u S612 . 1 `S606 1 . 1 0 ]
-[v _ADCON1bits ADCON1bits `VES612  1 e 1 @159 ]
-[s S539 . 1 `uc 1 ANS0 1 0 :1:0 
+[u S613 . 1 `S607 1 . 1 0 ]
+[v _ADCON1bits ADCON1bits `VES613  1 e 1 @159 ]
+[s S540 . 1 `uc 1 ANS0 1 0 :1:0 
 `uc 1 ANS1 1 0 :1:1 
 `uc 1 ANS2 1 0 :1:2 
 `uc 1 ANS3 1 0 :1:3 
@@ -297,8 +297,8 @@ SPI_ACTIVE_2_IDLE 64
 `uc 1 ANS7 1 0 :1:7 
 ]
 "3405
-[u S548 . 1 `S539 1 . 1 0 ]
-[v _ANSELbits ANSELbits `VES548  1 e 1 @392 ]
+[u S549 . 1 `S540 1 . 1 0 ]
+[v _ANSELbits ANSELbits `VES549  1 e 1 @392 ]
 "3592
 [v _ADIF ADIF `VEb  1 e 0 @102 ]
 "4135
@@ -319,19 +319,19 @@ SPI_ACTIVE_2_IDLE 64
 [v _TRISC3 TRISC3 `VEb  1 e 0 @1083 ]
 "4468
 [v _TRISC5 TRISC5 `VEb  1 e 0 @1085 ]
-"48 D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
+"50 D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
 [v _lecADC lecADC `uc  1 e 1 0 ]
-"49
+"51
 [v _cont cont `uc  1 e 1 0 ]
-"74
+"86
 [v _main main `(v  1 e 1 0 ]
 {
-"86
+"98
 } 0
-"101
+"112
 [v _setup_portb setup_portb `(v  1 e 1 0 ]
 {
-"108
+"119
 } 0
 "10 D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\oscilador.c
 [v _setupINTOSC setupINTOSC `(v  1 e 1 0 ]
@@ -341,10 +341,10 @@ SPI_ACTIVE_2_IDLE 64
 [v setupINTOSC@IRCF IRCF `uc  1 a 1 5 ]
 "37
 } 0
-"88 D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
+"100 D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
 [v _portsetup portsetup `(v  1 e 1 0 ]
 {
-"99
+"110
 } 0
 "12 D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\SPI.c
 [v _spiInit spiInit `(v  1 e 1 0 ]
@@ -370,17 +370,20 @@ SPI_ACTIVE_2_IDLE 64
 [v ADC_config@channel channel `i  1 p 2 0 ]
 "39
 } 0
-"55 D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
+"58 D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
 [v _isr isr `II(v  1 e 1 0 ]
 {
-"72
+"60
+[v isr@com com `uc  1 a 1 4 ]
+"84
 } 0
-"34 D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\SPI.c
-[v _spiWrite spiWrite `(v  1 e 1 0 ]
+"47 D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\SPI.c
+[v _spiRead spiRead `(uc  1 e 1 0 ]
 {
-[v spiWrite@dat dat `uc  1 a 1 wreg ]
-[v spiWrite@dat dat `uc  1 a 1 wreg ]
-"36
-[v spiWrite@dat dat `uc  1 a 1 0 ]
-"37
+"51
+} 0
+"29
+[v _spiReceiveWait spiReceiveWait `(v  1 s 1 spiReceiveWait ]
+{
+"32
 } 0

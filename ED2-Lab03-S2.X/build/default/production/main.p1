@@ -385,8 +385,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _main ]
 [f ]
 "60
-[; ;main.c: 60:     setupINTOSC(6);
-[e ( _setupINTOSC (1 -> -> 6 `i `uc ]
+[; ;main.c: 60:     setupINTOSC(5);
+[e ( _setupINTOSC (1 -> -> 5 `i `uc ]
 "61
 [; ;main.c: 61:     portsetup();
 [e ( _portsetup ..  ]
@@ -401,8 +401,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 65:         lecADC = ADC_read(0);
 [e = _lecADC -> ( _ADC_read (1 -> 0 `i `uc ]
 "66
-[; ;main.c: 66:         _delay((unsigned long)((5)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 66:         _delay((unsigned long)((5)*(2000000/4000.0)));
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 2000000 `l `d .4000.0 `ul ]
 "67
 [; ;main.c: 67:     }
 }

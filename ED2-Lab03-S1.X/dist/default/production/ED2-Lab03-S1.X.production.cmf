@@ -14,21 +14,22 @@
 $dist/default/production\ED2-Lab03-S1.X.production.o
 cinit CODE 0 F F 7 2 1
 idloc IDLOC 5 2000 2000 4 2 1
-text1 CODE 0 1B1 1B1 C 2 1
+text1 CODE 0 1BF 1BF C 2 1
 text2 CODE 0 16 16 5F 2 1
-text3 CODE 0 198 198 19 2 1
-text4 CODE 0 17A 17A 1E 2 1
+text3 CODE 0 1A6 1A6 19 2 1
+text4 CODE 0 188 188 1E 2 1
 text5 CODE 0 75 75 55 2 1
-text6 CODE 0 142 142 38 2 1
-text7 CODE 0 CA CA 3D 2 1
-text8 CODE 0 1BD 1BD 6 2 1
-maintext CODE 0 107 107 3B 2 1
+text6 CODE 0 150 150 38 2 1
+text7 CODE 0 CA CA 4E 2 1
+text8 CODE 0 1CB 1CB 9 2 1
+text9 CODE 0 1D4 1D4 7 2 1
+maintext CODE 0 118 118 38 2 1
 cstackCOMMON COMMON 1 70 70 6 1 1
 cstackBANK0 BANK0 1 20 20 6 1 1
 intentry CODE 0 4 4 8 2 1
 bssCOMMON COMMON 1 76 76 3 1 1
 config CONFIG 4 2007 2007 2 2 1
-$C:\Users\Pablo\AppData\Local\Temp\xcAso5k.o
+$C:\Users\Pablo\AppData\Local\Temp\xcAsm28.o
 idloc IDLOC 5 2000 2000 4 2 1
 reset_vec CODE 0 0 0 3 2 1
 end_init CODE 0 C C 3 2 1
@@ -48,11 +49,11 @@ BANK1 A0-EF 1
 BANK2 110-16F 1
 BANK3 190-1EF 1
 CONST 3-3 2
-CONST 1C3-1FFF 2
+CONST 1DB-1FFF 2
 ENTRY 3-3 2
-ENTRY 1C3-1FFF 2
+ENTRY 1DB-1FFF 2
 CODE 3-3 2
-CODE 1C3-1FFF 2
+CODE 1DB-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-10F 1
@@ -60,9 +61,9 @@ SFR3 180-18F 1
 COMMON 79-7D 1
 EEDATA 2100-21FF 2
 STRCODE 3-3 2
-STRCODE 1C3-1FFF 2
+STRCODE 1DB-1FFF 2
 STRING 3-3 2
-STRING 1C3-1FFF 2
+STRING 1DB-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -77,55 +78,65 @@ STRING 1C3-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\ED2-Lab03-S1.X.production.o
-F cinit CODE >1124:C:\Users\Pablo\AppData\Local\Temp\xcAso5k.s
-F cinit CODE >1127:C:\Users\Pablo\AppData\Local\Temp\xcAso5k.s
-F cinit CODE >1144:C:\Users\Pablo\AppData\Local\Temp\xcAso5k.s
-10 cinit CODE >1145:C:\Users\Pablo\AppData\Local\Temp\xcAso5k.s
-11 cinit CODE >1146:C:\Users\Pablo\AppData\Local\Temp\xcAso5k.s
-12 cinit CODE >1152:C:\Users\Pablo\AppData\Local\Temp\xcAso5k.s
-12 cinit CODE >1154:C:\Users\Pablo\AppData\Local\Temp\xcAso5k.s
-13 cinit CODE >1155:C:\Users\Pablo\AppData\Local\Temp\xcAso5k.s
-4 intentry CODE >55:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
-1BD text8 CODE >34:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\SPI.c
-1BE text8 CODE >36:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\SPI.c
-1C2 text8 CODE >37:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\SPI.c
-CA text7 CODE >55:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
-CA text7 CODE >56:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
-D0 text7 CODE >57:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
-D6 text7 CODE >58:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
-D9 text7 CODE >60:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
-DD text7 CODE >61:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
-E1 text7 CODE >63:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
-EA text7 CODE >64:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
-ED text7 CODE >66:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
-F3 text7 CODE >67:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
-FC text7 CODE >68:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
-FF text7 CODE >70:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
-100 text7 CODE >72:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
-142 text6 CODE >11:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
-142 text6 CODE >12:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
-148 text6 CODE >13:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
-149 text6 CODE >14:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
-14C text6 CODE >15:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
-14F text6 CODE >16:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
-14F text6 CODE >17:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
-155 text6 CODE >18:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
-156 text6 CODE >19:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
-159 text6 CODE >20:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
-15C text6 CODE >22:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
-15C text6 CODE >23:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
-162 text6 CODE >24:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
-163 text6 CODE >25:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
-166 text6 CODE >26:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
-169 text6 CODE >27:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
-169 text6 CODE >29:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
-16C text6 CODE >30:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
-16D text6 CODE >32:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
-170 text6 CODE >33:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
-171 text6 CODE >35:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
-172 text6 CODE >37:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
-175 text6 CODE >38:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
-179 text6 CODE >39:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
+F cinit CODE >1125:C:\Users\Pablo\AppData\Local\Temp\xcAsm28.s
+F cinit CODE >1128:C:\Users\Pablo\AppData\Local\Temp\xcAsm28.s
+F cinit CODE >1145:C:\Users\Pablo\AppData\Local\Temp\xcAsm28.s
+10 cinit CODE >1146:C:\Users\Pablo\AppData\Local\Temp\xcAsm28.s
+11 cinit CODE >1147:C:\Users\Pablo\AppData\Local\Temp\xcAsm28.s
+12 cinit CODE >1153:C:\Users\Pablo\AppData\Local\Temp\xcAsm28.s
+12 cinit CODE >1155:C:\Users\Pablo\AppData\Local\Temp\xcAsm28.s
+13 cinit CODE >1156:C:\Users\Pablo\AppData\Local\Temp\xcAsm28.s
+4 intentry CODE >58:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
+1D4 text9 CODE >29:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\SPI.c
+1D4 text9 CODE >31:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\SPI.c
+1DA text9 CODE >32:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\SPI.c
+1CB text8 CODE >47:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\SPI.c
+1CB text8 CODE >49:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\SPI.c
+1D0 text8 CODE >50:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\SPI.c
+1D3 text8 CODE >51:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\SPI.c
+CA text7 CODE >58:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
+CA text7 CODE >59:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
+D0 text7 CODE >61:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
+D6 text7 CODE >62:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
+DA text7 CODE >63:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
+DF text7 CODE >64:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
+E1 text7 CODE >65:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
+E2 text7 CODE >66:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
+E7 text7 CODE >67:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
+E9 text7 CODE >70:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
+EA text7 CODE >72:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
+EE text7 CODE >73:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
+F2 text7 CODE >75:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
+FB text7 CODE >76:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
+FE text7 CODE >78:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
+104 text7 CODE >79:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
+10D text7 CODE >80:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
+110 text7 CODE >82:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
+111 text7 CODE >84:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
+150 text6 CODE >11:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
+150 text6 CODE >12:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
+156 text6 CODE >13:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
+157 text6 CODE >14:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
+15A text6 CODE >15:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
+15D text6 CODE >16:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
+15D text6 CODE >17:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
+163 text6 CODE >18:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
+164 text6 CODE >19:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
+167 text6 CODE >20:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
+16A text6 CODE >22:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
+16A text6 CODE >23:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
+170 text6 CODE >24:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
+171 text6 CODE >25:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
+174 text6 CODE >26:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
+177 text6 CODE >27:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
+177 text6 CODE >29:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
+17A text6 CODE >30:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
+17B text6 CODE >32:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
+17E text6 CODE >33:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
+17F text6 CODE >35:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
+180 text6 CODE >37:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
+183 text6 CODE >38:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
+187 text6 CODE >39:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
 75 text5 CODE >41:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
 75 text5 CODE >42:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
 7D text5 CODE >43:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
@@ -145,27 +156,27 @@ BA text5 CODE >60:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.
 C1 text5 CODE >61:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
 C4 text5 CODE >62:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
 C9 text5 CODE >66:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.c
-17A text4 CODE >12:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\SPI.c
-17B text4 CODE >14:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\SPI.c
-17E text4 CODE >15:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\SPI.c
-182 text4 CODE >17:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\SPI.c
-188 text4 CODE >18:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\SPI.c
-189 text4 CODE >19:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\SPI.c
-18A text4 CODE >22:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\SPI.c
-191 text4 CODE >23:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\SPI.c
-192 text4 CODE >24:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\SPI.c
-192 text4 CODE >26:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\SPI.c
-197 text4 CODE >27:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\SPI.c
-198 text3 CODE >88:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
-198 text3 CODE >89:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
-19B text3 CODE >90:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
-19E text3 CODE >92:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
-19F text3 CODE >93:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
-1A0 text3 CODE >94:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
-1A1 text3 CODE >95:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
-1A4 text3 CODE >96:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
-1A5 text3 CODE >97:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
-1B0 text3 CODE >99:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
+188 text4 CODE >12:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\SPI.c
+189 text4 CODE >14:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\SPI.c
+18C text4 CODE >15:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\SPI.c
+190 text4 CODE >17:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\SPI.c
+196 text4 CODE >18:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\SPI.c
+197 text4 CODE >19:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\SPI.c
+198 text4 CODE >22:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\SPI.c
+19F text4 CODE >23:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\SPI.c
+1A0 text4 CODE >24:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\SPI.c
+1A0 text4 CODE >26:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\SPI.c
+1A5 text4 CODE >27:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\SPI.c
+1A6 text3 CODE >100:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
+1A6 text3 CODE >101:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
+1A9 text3 CODE >102:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
+1AC text3 CODE >103:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
+1AD text3 CODE >104:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
+1AE text3 CODE >105:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
+1AF text3 CODE >106:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
+1B2 text3 CODE >107:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
+1B3 text3 CODE >108:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
+1BE text3 CODE >110:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
 16 text2 CODE >10:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\oscilador.c
 17 text2 CODE >11:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\oscilador.c
 1D text2 CODE >12:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\oscilador.c
@@ -192,23 +203,22 @@ C9 text5 CODE >66:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.
 6D text2 CODE >33:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\oscilador.c
 71 text2 CODE >36:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\oscilador.c
 74 text2 CODE >37:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\oscilador.c
-1B1 text1 CODE >101:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
-1B1 text1 CODE >102:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
-1B5 text1 CODE >103:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
-1B6 text1 CODE >104:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
-1B7 text1 CODE >105:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
-1B9 text1 CODE >106:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
-1BB text1 CODE >107:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
-1BC text1 CODE >108:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
-107 maintext CODE >74:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
-107 maintext CODE >75:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
-10D maintext CODE >76:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
-112 maintext CODE >77:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
-117 maintext CODE >78:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
-122 maintext CODE >79:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
-123 maintext CODE >82:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
-131 maintext CODE >83:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
-133 maintext CODE >84:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
+1BF text1 CODE >112:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
+1BF text1 CODE >113:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
+1C3 text1 CODE >114:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
+1C4 text1 CODE >115:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
+1C5 text1 CODE >116:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
+1C7 text1 CODE >117:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
+1C9 text1 CODE >118:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
+1CA text1 CODE >119:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
+118 maintext CODE >86:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
+118 maintext CODE >87:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
+11E maintext CODE >88:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
+123 maintext CODE >89:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
+128 maintext CODE >90:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
+133 maintext CODE >91:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
+134 maintext CODE >94:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
+142 maintext CODE >96:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -222,7 +232,7 @@ C9 text5 CODE >66:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\setupADC.
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
 ___latbits 2 0 ABS 0 - dist/default/production\ED2-Lab03-S1.X.production.o
-__Hspace_0 1C3 0 ABS 0 - -
+__Hspace_0 1DB 0 ABS 0 - -
 __Hspace_1 79 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
@@ -234,20 +244,20 @@ _ADIF 66 0 ABS 0 - dist/default/production\ED2-Lab03-S1.X.production.o
 _IOCB 96 0 ABS 0 - dist/default/production\ED2-Lab03-S1.X.production.o
 _RBIF 58 0 ABS 0 - dist/default/production\ED2-Lab03-S1.X.production.o
 _WPUB 95 0 ABS 0 - dist/default/production\ED2-Lab03-S1.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\Pablo\AppData\Local\Temp\xcAso5k.o
+___sp 0 0 STACK 2 stack C:\Users\Pablo\AppData\Local\Temp\xcAsm28.o
 _cont 77 0 COMMON 1 bssCOMMON dist/default/production\ED2-Lab03-S1.X.production.o
-_main 20E 0 CODE 0 maintext dist/default/production\ED2-Lab03-S1.X.production.o
+_main 230 0 CODE 0 maintext dist/default/production\ED2-Lab03-S1.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\ED2-Lab03-S1.X.production.o
-start 18 0 CODE 0 init C:\Users\Pablo\AppData\Local\Temp\xcAso5k.o
+start 18 0 CODE 0 init C:\Users\Pablo\AppData\Local\Temp\xcAsm28.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 _OPTION_REGbits 81 0 ABS 0 - dist/default/production\ED2-Lab03-S1.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAso5k.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAso5k.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAso5k.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAso5k.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAso5k.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAso5k.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAsm28.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAsm28.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAsm28.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAsm28.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAsm28.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAsm28.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 _setupINTOSC 2C 0 CODE 0 text2 dist/default/production\ED2-Lab03-S1.X.production.o
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\ED2-Lab03-S1.X.production.o
@@ -259,18 +269,18 @@ _ADRESH 1E 0 ABS 0 - dist/default/production\ED2-Lab03-S1.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
 _ADC_read EA 0 CODE 0 text5 dist/default/production\ED2-Lab03-S1.X.production.o
 __end_of_ADC_read 194 0 CODE 0 text5 dist/default/production\ED2-Lab03-S1.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\Pablo\AppData\Local\Temp\xcAso5k.o
-___stacklo 0 0 ABS 0 - C:\Users\Pablo\AppData\Local\Temp\xcAso5k.o
+___stackhi 0 0 ABS 0 - C:\Users\Pablo\AppData\Local\Temp\xcAsm28.o
+___stacklo 0 0 ABS 0 - C:\Users\Pablo\AppData\Local\Temp\xcAsm28.o
 spiInit@sDataSample 20 0 BANK0 1 cstackBANK0 dist/default/production\ED2-Lab03-S1.X.production.o
 start_initialization 1E 0 CODE 0 cinit dist/default/production\ED2-Lab03-S1.X.production.o
 _TRISAbits 85 0 ABS 0 - dist/default/production\ED2-Lab03-S1.X.production.o
-_setup_portb 362 0 CODE 0 text1 dist/default/production\ED2-Lab03-S1.X.production.o
+_setup_portb 37E 0 CODE 0 text1 dist/default/production\ED2-Lab03-S1.X.production.o
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\ED2-Lab03-S1.X.production.o
 _SSPBUF 13 0 ABS 0 - dist/default/production\ED2-Lab03-S1.X.production.o
 _SSPCON 14 0 ABS 0 - dist/default/production\ED2-Lab03-S1.X.production.o
 _TRISC3 43B 0 ABS 0 - dist/default/production\ED2-Lab03-S1.X.production.o
 _TRISC5 43D 0 ABS 0 - dist/default/production\ED2-Lab03-S1.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\Pablo\AppData\Local\Temp\xcAso5k.o
+___int_sp 0 0 STACK 2 stack C:\Users\Pablo\AppData\Local\Temp\xcAsm28.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -279,8 +289,9 @@ __Hcinit 2C 0 CODE 0 cinit -
 __Hidloc 4008 0 IDLOC 5 idloc -
 __Hstack 0 0 STACK 2 stack -
 __Hmaintext 0 0 ABS 0 maintext -
-__end_of_portsetup 362 0 CODE 0 text3 dist/default/production\ED2-Lab03-S1.X.production.o
-__end_of_spiInit 330 0 CODE 0 text4 dist/default/production\ED2-Lab03-S1.X.production.o
+__end_of_portsetup 37E 0 CODE 0 text3 dist/default/production\ED2-Lab03-S1.X.production.o
+__end_of_spiInit 34C 0 CODE 0 text4 dist/default/production\ED2-Lab03-S1.X.production.o
+__end_of_spiRead 3A8 0 CODE 0 text8 dist/default/production\ED2-Lab03-S1.X.production.o
 ADC_read@channel 20 0 BANK0 1 cstackBANK0 dist/default/production\ED2-Lab03-S1.X.production.o
 __Hcommon 0 0 ABS 0 common -
 __Hconfig 4012 0 CONFIG 4 config -
@@ -313,28 +324,29 @@ __Lsfr2 0 0 ABS 0 sfr2 -
 __Lsfr3 0 0 ABS 0 sfr3 -
 __Ltext 0 0 ABS 0 text -
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 -
-_portsetup 330 0 CODE 0 text3 dist/default/production\ED2-Lab03-S1.X.production.o
+_portsetup 34C 0 CODE 0 text3 dist/default/production\ED2-Lab03-S1.X.production.o
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 _RD3 43 0 ABS 0 - dist/default/production\ED2-Lab03-S1.X.production.o
 _RD4 44 0 ABS 0 - dist/default/production\ED2-Lab03-S1.X.production.o
 _RD5 45 0 ABS 0 - dist/default/production\ED2-Lab03-S1.X.production.o
 _RD6 46 0 ABS 0 - dist/default/production\ED2-Lab03-S1.X.production.o
 _RD7 47 0 ABS 0 - dist/default/production\ED2-Lab03-S1.X.production.o
-__S0 1C3 0 ABS 0 - -
+__S0 1DB 0 ABS 0 - -
 __S1 79 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
 _isr 194 0 CODE 0 text7 dist/default/production\ED2-Lab03-S1.X.production.o
 ?_ADC_read 20 0 BANK0 1 cstackBANK0 dist/default/production\ED2-Lab03-S1.X.production.o
 saved_w 7E 0 ABS 0 - dist/default/production\ED2-Lab03-S1.X.production.o
 __end_of_setupINTOSC EA 0 CODE 0 text2 dist/default/production\ED2-Lab03-S1.X.production.o
-__end_of_isr 20E 0 CODE 0 text7 dist/default/production\ED2-Lab03-S1.X.production.o
+__end_of_isr 230 0 CODE 0 text7 dist/default/production\ED2-Lab03-S1.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Pablo\AppData\Local\Temp\xcAso5k.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Pablo\AppData\Local\Temp\xcAsm28.o
 _lecADC 78 0 COMMON 1 bssCOMMON dist/default/production\ED2-Lab03-S1.X.production.o
 _PIE1bits 8C 0 ABS 0 - dist/default/production\ED2-Lab03-S1.X.production.o
-__pmaintext 20E 0 CODE 0 maintext dist/default/production\ED2-Lab03-S1.X.production.o
+__pmaintext 230 0 CODE 0 maintext dist/default/production\ED2-Lab03-S1.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
+isr@com 74 0 COMMON 1 cstackCOMMON dist/default/production\ED2-Lab03-S1.X.production.o
 _ADCON0bits 1F 0 ABS 0 - dist/default/production\ED2-Lab03-S1.X.production.o
 _ADCON1bits 9F 0 ABS 0 - dist/default/production\ED2-Lab03-S1.X.production.o
 __Lspace_0 0 0 ABS 0 - -
@@ -343,7 +355,7 @@ __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
 __Lspace_4 0 0 ABS 0 - -
 __pbssCOMMON 76 0 COMMON 1 bssCOMMON dist/default/production\ED2-Lab03-S1.X.production.o
-_ADC_config 284 0 CODE 0 text6 dist/default/production\ED2-Lab03-S1.X.production.o
+_ADC_config 2A0 0 CODE 0 text6 dist/default/production\ED2-Lab03-S1.X.production.o
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 -
 _PIR1bits C 0 ABS 0 - dist/default/production\ED2-Lab03-S1.X.production.o
 __Lend_init 18 0 CODE 0 end_init -
@@ -351,31 +363,33 @@ __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 end_of_initialization 24 0 CODE 0 cinit dist/default/production\ED2-Lab03-S1.X.production.o
 __Hintentry 18 0 CODE 0 intentry -
 __Lstrings 0 0 ABS 0 strings -
-__end_of_setup_portb 37A 0 CODE 0 text1 dist/default/production\ED2-Lab03-S1.X.production.o
+__end_of_setup_portb 396 0 CODE 0 text1 dist/default/production\ED2-Lab03-S1.X.production.o
 __Hreset_vec 6 0 CODE 0 reset_vec -
-__ptext1 362 0 CODE 0 text1 dist/default/production\ED2-Lab03-S1.X.production.o
+__ptext1 37E 0 CODE 0 text1 dist/default/production\ED2-Lab03-S1.X.production.o
 __ptext2 2C 0 CODE 0 text2 dist/default/production\ED2-Lab03-S1.X.production.o
-__ptext3 330 0 CODE 0 text3 dist/default/production\ED2-Lab03-S1.X.production.o
-__ptext4 2F4 0 CODE 0 text4 dist/default/production\ED2-Lab03-S1.X.production.o
+__ptext3 34C 0 CODE 0 text3 dist/default/production\ED2-Lab03-S1.X.production.o
+__ptext4 310 0 CODE 0 text4 dist/default/production\ED2-Lab03-S1.X.production.o
 __ptext5 EA 0 CODE 0 text5 dist/default/production\ED2-Lab03-S1.X.production.o
-__ptext6 284 0 CODE 0 text6 dist/default/production\ED2-Lab03-S1.X.production.o
+__ptext6 2A0 0 CODE 0 text6 dist/default/production\ED2-Lab03-S1.X.production.o
 __ptext7 194 0 CODE 0 text7 dist/default/production\ED2-Lab03-S1.X.production.o
-__ptext8 37A 0 CODE 0 text8 dist/default/production\ED2-Lab03-S1.X.production.o
-_spiInit 2F4 0 CODE 0 text4 dist/default/production\ED2-Lab03-S1.X.production.o
-spiWrite@dat 70 0 COMMON 1 cstackCOMMON dist/default/production\ED2-Lab03-S1.X.production.o
+__ptext8 396 0 CODE 0 text8 dist/default/production\ED2-Lab03-S1.X.production.o
+__ptext9 3A8 0 CODE 0 text9 dist/default/production\ED2-Lab03-S1.X.production.o
+_spiInit 310 0 CODE 0 text4 dist/default/production\ED2-Lab03-S1.X.production.o
+_spiRead 396 0 CODE 0 text8 dist/default/production\ED2-Lab03-S1.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 spiInit@sType 75 0 COMMON 1 cstackCOMMON dist/default/production\ED2-Lab03-S1.X.production.o
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __Lreset_vec 0 0 CODE 0 reset_vec -
 __end_of__initialization 24 0 CODE 0 cinit dist/default/production\ED2-Lab03-S1.X.production.o
-__end_of_ADC_config 2F4 0 CODE 0 text6 dist/default/production\ED2-Lab03-S1.X.production.o
+__end_of_ADC_config 310 0 CODE 0 text6 dist/default/production\ED2-Lab03-S1.X.production.o
 __Lfunctab 0 0 ENTRY 0 functab -
+_spiReceiveWait 3A8 0 CODE 0 text9 dist/default/production\ED2-Lab03-S1.X.production.o
 __Lclrtext 0 0 ABS 0 clrtext -
 _ANSELbits 188 0 ABS 0 - dist/default/production\ED2-Lab03-S1.X.production.o
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\ED2-Lab03-S1.X.production.o
 _SSPSTAT 94 0 ABS 0 - dist/default/production\ED2-Lab03-S1.X.production.o
 __Hend_init 1E 0 CODE 0 end_init -
-__end_of_main 284 0 CODE 0 maintext dist/default/production\ED2-Lab03-S1.X.production.o
+__end_of_main 2A0 0 CODE 0 maintext dist/default/production\ED2-Lab03-S1.X.production.o
 _PORTD 8 0 ABS 0 - dist/default/production\ED2-Lab03-S1.X.production.o
 _SSPIF 63 0 ABS 0 - dist/default/production\ED2-Lab03-S1.X.production.o
 _TRISB 86 0 ABS 0 - dist/default/production\ED2-Lab03-S1.X.production.o
@@ -387,8 +401,7 @@ _SSPSTATbits 94 0 ABS 0 - dist/default/production\ED2-Lab03-S1.X.production.o
 __pintentry 8 0 CODE 0 intentry dist/default/production\ED2-Lab03-S1.X.production.o
 spiInit@sClockIdle 21 0 BANK0 1 cstackBANK0 dist/default/production\ED2-Lab03-S1.X.production.o
 __initialization 1E 0 CODE 0 cinit dist/default/production\ED2-Lab03-S1.X.production.o
-_spiWrite 37A 0 CODE 0 text8 dist/default/production\ED2-Lab03-S1.X.production.o
-__end_of_spiWrite 386 0 CODE 0 text8 dist/default/production\ED2-Lab03-S1.X.production.o
+__end_of_spiReceiveWait 3B6 0 CODE 0 text9 dist/default/production\ED2-Lab03-S1.X.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -416,7 +429,7 @@ __end_of_spiWrite 386 0 CODE 0 text8 dist/default/production\ED2-Lab03-S1.X.prod
 %SEGMENTS
 cstackCOMMON 1 70 70 9 1
 cstackBANK0 1 20 20 6 1
-intentry 0 4 8 1BF 2
+intentry 0 4 8 1D7 2
 reset_vec 0 0 0 3 2
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section

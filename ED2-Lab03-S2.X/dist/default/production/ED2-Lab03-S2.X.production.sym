@@ -4,13 +4,13 @@ _RD4 44 0 ABS 0
 _RD5 45 0 ABS 0
 _RD6 46 0 ABS 0
 _RD7 47 0 ABS 0
-__S0 16E 0 ABS 0
+__S0 16F 0 ABS 0
 __S1 7A 0 ABS 0
 __S3 0 0 ABS 0
 __Hintentry C 0 CODE 0
 __Lintentry 4 0 CODE 0
 __pintentry 4 0 CODE 0
-_isr 152 0 CODE 0
+_isr 153 0 CODE 0
 _ADIF 66 0 ABS 0
 spiWrite@dat 70 0 COMMON 1
 _ADC_read 73 0 CODE 0
@@ -28,7 +28,7 @@ interrupt_function 4 0 CODE 0
 __Hconfig 2009 0 CONFIG 4
 __Lconfig 0 0 CONFIG 4
 ?_ADC_read 73 0 COMMON 1
-_spiWrite 168 0 CODE 0
+_spiWrite 169 0 CODE 0
 __Hram 0 0 ABS 0
 __Lram 0 0 ABS 0
 __Hfunctab 0 0 ENTRY 0
@@ -57,19 +57,19 @@ __Hsfr2 0 0 ABS 0
 __Lsfr2 0 0 ABS 0
 __Hsfr3 0 0 ABS 0
 __Lsfr3 0 0 ABS 0
-__end_of_spiWrite 16E 0 CODE 0
+__end_of_spiWrite 16F 0 CODE 0
 ___stackhi 0 0 ABS 0
 __Hcode 0 0 ABS 0
 __Lcode 0 0 ABS 0
 saved_w 7E 0 ABS 0
 __Hinit C 0 CODE 0
 __Linit C 0 CODE 0
-__end_of_main 125 0 CODE 0
+__end_of_main 126 0 CODE 0
 __Htext 0 0 ABS 0
 __Ltext 0 0 ABS 0
 end_of_initialization 10 0 CODE 0
 ___stacklo 0 0 ABS 0
-__end_of_spiInit 152 0 CODE 0
+__end_of_spiInit 153 0 CODE 0
 __end_of_ADC_read C3 0 CODE 0
 _TRISAbits 85 0 ABS 0
 _PORTAbits 5 0 ABS 0
@@ -90,14 +90,14 @@ __Hpowerup 0 0 CODE 0
 _setupINTOSC 14 0 CODE 0
 _SSPSTAT 94 0 ABS 0
 __Lpowerup 0 0 CODE 0
-_portsetup 125 0 CODE 0
+_portsetup 126 0 CODE 0
 __ptext1 14 0 CODE 0
-__ptext2 125 0 CODE 0
-__ptext3 13C 0 CODE 0
+__ptext2 126 0 CODE 0
+__ptext3 13D 0 CODE 0
 __ptext4 73 0 CODE 0
 __ptext5 C3 0 CODE 0
-__ptext6 152 0 CODE 0
-__ptext7 168 0 CODE 0
+__ptext6 153 0 CODE 0
+__ptext7 169 0 CODE 0
 _ADC_config C3 0 CODE 0
 __Hclrtext 0 0 ABS 0
 __Lclrtext 0 0 ABS 0
@@ -108,13 +108,13 @@ __Hidloc 2004 0 IDLOC 5
 __Lidloc 0 0 IDLOC 5
 __Hstack 0 0 STACK 2
 __Lstack 0 0 STACK 2
-__Hspace_0 16E 0 ABS 0
+__Hspace_0 16F 0 ABS 0
 __Lspace_0 0 0 ABS 0
-__end_of_isr 168 0 CODE 0
+__end_of_isr 169 0 CODE 0
 __Hspace_1 7A 0 ABS 0
 __Lspace_1 0 0 ABS 0
 __end_of_setupINTOSC 73 0 CODE 0
-_spiInit 13C 0 CODE 0
+_spiInit 13D 0 CODE 0
 __Hspace_2 0 0 ABS 0
 __Lspace_2 0 0 ABS 0
 __Hcinit 14 0 CODE 0
@@ -143,7 +143,7 @@ intlevel2 0 0 ENTRY 0
 intlevel3 0 0 ENTRY 0
 intlevel4 0 0 ENTRY 0
 intlevel5 0 0 ENTRY 0
-__end_of_portsetup 13C 0 CODE 0
+__end_of_portsetup 13D 0 CODE 0
 spiInit@sDataSample 73 0 COMMON 1
 __HcstackCOMMON 0 0 ABS 0
 __LcstackCOMMON 0 0 ABS 0
@@ -155,11 +155,11 @@ __pmaintext FB 0 CODE 0
 __initialization F 0 CODE 0
 %segments
 reset_vec 0 5 CODE 0 0
-intentry 8 2DB CODE 8 0
+intentry 8 2DD CODE 8 0
 cstackCOMMON 70 79 COMMON 70 1
 %locals
 dist/default/production\ED2-Lab03-S2.X.production.o
-C:\Users\Pablo\AppData\Local\Temp\xcAshbs.s
+C:\Users\Pablo\AppData\Local\Temp\xcAs9ss.s
 1110 F 0 CODE 0
 1113 F 0 CODE 0
 1124 F 0 CODE 0
@@ -202,28 +202,28 @@ oscilador.c
 36 6F 0 CODE 0
 37 72 0 CODE 0
 main.c
-70 125 0 CODE 0
-71 125 0 CODE 0
-72 128 0 CODE 0
-74 12B 0 CODE 0
-75 12C 0 CODE 0
-76 12D 0 CODE 0
-77 12E 0 CODE 0
-78 131 0 CODE 0
-79 132 0 CODE 0
-81 13B 0 CODE 0
+70 126 0 CODE 0
+71 126 0 CODE 0
+72 129 0 CODE 0
+74 12C 0 CODE 0
+75 12D 0 CODE 0
+76 12E 0 CODE 0
+77 12F 0 CODE 0
+78 132 0 CODE 0
+79 133 0 CODE 0
+81 13C 0 CODE 0
 SPI.c
-12 13C 0 CODE 0
-14 13D 0 CODE 0
-15 140 0 CODE 0
-17 144 0 CODE 0
-18 146 0 CODE 0
-19 147 0 CODE 0
-22 148 0 CODE 0
-23 14B 0 CODE 0
-24 14C 0 CODE 0
-26 14C 0 CODE 0
-27 151 0 CODE 0
+12 13D 0 CODE 0
+14 13E 0 CODE 0
+15 141 0 CODE 0
+17 145 0 CODE 0
+18 147 0 CODE 0
+19 148 0 CODE 0
+22 149 0 CODE 0
+23 14C 0 CODE 0
+24 14D 0 CODE 0
+26 14D 0 CODE 0
+27 152 0 CODE 0
 setupADC.c
 41 73 0 CODE 0
 42 73 0 CODE 0
@@ -269,13 +269,13 @@ setupADC.c
 38 F6 0 CODE 0
 39 FA 0 CODE 0
 main.c
-52 152 0 CODE 0
-53 152 0 CODE 0
-54 158 0 CODE 0
-55 15E 0 CODE 0
-57 161 0 CODE 0
+52 153 0 CODE 0
+53 153 0 CODE 0
+54 159 0 CODE 0
+55 15F 0 CODE 0
+57 162 0 CODE 0
 52 4 0 CODE 0
 SPI.c
-34 168 0 CODE 0
-36 169 0 CODE 0
-37 16D 0 CODE 0
+34 169 0 CODE 0
+36 16A 0 CODE 0
+37 16E 0 CODE 0

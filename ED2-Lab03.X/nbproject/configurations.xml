@@ -7,6 +7,7 @@
       <itemPath>LCD.h</itemPath>
       <itemPath>oscilador.h</itemPath>
       <itemPath>SPI.h</itemPath>
+      <itemPath>conversiones.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -19,6 +20,7 @@
       <itemPath>LCD.c</itemPath>
       <itemPath>oscilador.c</itemPath>
       <itemPath>SPI.c</itemPath>
+      <itemPath>conversiones.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

@@ -2837,13 +2837,13 @@ void __attribute__((picinterrupt(("")))) isr (void){
 }
 
 void main(void) {
-    setupINTOSC(6);
+    setupINTOSC(5);
     portsetup();
     ADC_config(0x01);
 
     while(1){
         lecADC = ADC_read(0);
-        _delay((unsigned long)((5)*(4000000/4000.0)));
+        _delay((unsigned long)((5)*(2000000/4000.0)));
     }
 }
 

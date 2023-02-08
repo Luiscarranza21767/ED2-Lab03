@@ -9,12 +9,12 @@
 ### Memory Usage ###
  Intel Hex-file ranges:
   0h - 5h		(dist/default/production\ED2-Lab03-S2.X.production.hex)
-  8h - 2DBh		(dist/default/production\ED2-Lab03-S2.X.production.hex)
+  8h - 2DDh		(dist/default/production\ED2-Lab03-S2.X.production.hex)
   4000h - 4007h		(dist/default/production\ED2-Lab03-S2.X.production.hex)
   400Eh - 4011h		(dist/default/production\ED2-Lab03-S2.X.production.hex)
  Unused ranges:
   6h - 7h
-  2DCh - 3FFFh
+  2DEh - 3FFFh
   4008h - 400Dh
 
 ### Hex Memory Map ###
@@ -69,7 +69,7 @@
 000002A0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000002B0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000002C0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-000002D0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- --
+000002D0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- --
 ----------------------------------------------------------
 00004000 | H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- -- -- -- H1 H1
 00004010 | H1 H1 -- -- -- -- -- -- -- -- -- -- -- -- -- --

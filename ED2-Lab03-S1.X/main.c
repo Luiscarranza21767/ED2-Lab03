@@ -40,13 +40,16 @@
 #include "oscilador.h"
 #include "setupADC.h"
 
-#define _XTAL_FREQ 4000000
+#define _XTAL_FREQ 2000000
+#define READ_ADC 0
+#define READ_CONT 1
 
 void portsetup(void);
 void setup_portb(void);
 
 uint8_t lecADC;
 uint8_t cont;
+
 char dato;
 
 /*
@@ -54,7 +57,16 @@ char dato;
  */
 void __interrupt() isr (void){
     if(SSPIF == 1){
-        spiWrite(lecADC);
+        uint8_t com;
+        com = spiRead();
+        PORTD = com;
+        if(com == 1){
+            SSPBUF = lecADC;
+        }
+        else if(com == 0){
+            SSPBUF = cont;
+        }
+        
         SSPIF = 0;
     }
     if (INTCONbits.RBIF){           // Revisa si hay interrupción del puerto B
@@ -72,7 +84,7 @@ void __interrupt() isr (void){
 }
     
 void main(void) {
-    setupINTOSC(6);     // Oscilador a 4MHz
+    setupINTOSC(5);     // Oscilador a 4MHz
     portsetup();
     setup_portb();
     ADC_config(0x01);   // Configurar canal analógico 0
@@ -80,7 +92,7 @@ void main(void) {
             
     while(1){
         lecADC = ADC_read(0);
-        PORTD = cont;
+        //PORTD = cont;
         __delay_ms(5);
     }
 }
@@ -88,7 +100,6 @@ void main(void) {
 void portsetup(){
     TRISD = 0;
     PORTD = 0;
-    
     INTCONbits.GIE = 1;         // Habilitamos interrupciones
     INTCONbits.PEIE = 1;        // Habilitamos interrupciones PEIE
     PIR1bits.SSPIF = 0;         // Borramos bandera interrupción MSSP

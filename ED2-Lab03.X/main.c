@@ -39,64 +39,99 @@
 #include "SPI.h"
 #include "LCD.h"
 #include "oscilador.h"
+#include "conversiones.h"
 
-#define _XTAL_FREQ 4000000
+#define _XTAL_FREQ 2000000
 void portsetup(void);
 
 uint8_t lecADC;
 uint8_t lecADC2;
-uint8_t cont;
+int cont;
 float conver;
+float conver1;
 char valADC[3];
-char contador[3];
+char valADC2[3];
+char uni;
+char dec;
+char cent;
 /*
  * 
  */
 
 void main(void) {
-    setupINTOSC(6);     //Oscilador a 1MHz
+    setupINTOSC(5);     //Oscilador a 1MHz
     portsetup();
     Lcd_Init();
     Lcd_Clear();
     Lcd_Set_Cursor(1,2);
-    Lcd_Write_String("S1:   S2:   S3:"); 
+    Lcd_Write_String("S1:  S2:  S3:"); 
+    Lcd_Set_Cursor(2,1);
+    Lcd_Write_String("    V          V");
+    SSPBUF = 0;
     
     while(1){
+        __delay_ms(20);
+        RA0 = 1;
+         //Lectura de contador
+        __delay_ms(10);
         
-        PORTCbits.RC2 = 0;  // Seleccionar Slave 1
-        PORTCbits.RC1 = 1;
-        __delay_ms(1);
+        RA0 = 0;
+        //spiWrite(0);
+        spiWrite(1);
+        //RA0 = 1;
+        while(!SSPSTATbits.BF);
+        //RA0 = 0;
+        cont = SSPBUF; // Guarda el dato de la lectura
+        RA0 = 1;
+        
+        cent = inttochar(descomponer(2, cont));
+        Lcd_Set_Cursor(2,7);
+        Lcd_Write_Char(cent);
+        dec = inttochar(descomponer(1, cont));
+        Lcd_Set_Cursor(2,8);
+        Lcd_Write_Char(dec);
+        uni = inttochar(descomponer(0, cont));
+        Lcd_Set_Cursor(2,9);
+        Lcd_Write_Char(uni);
+        
+        //Lectura de ADC1
+        __delay_ms(20);
+        
+        RA0 = 0;
         spiWrite(0);
-        lecADC = spiRead(); // Guarda el dato de la lectura
+        //RA0 = 1;
+        while(!SSPSTATbits.BF);
         
-        PORTCbits.RC2 = 1;
-        PORTCbits.RC1 = 0;
-        __delay_ms(1);
-        spiWrite(0);
-        lecADC2 = spiRead();
+        //RA0 = 0;
+        lecADC = SSPBUF; // Guarda el dato de la lectura
+        __delay_ms(10);
         
-//        PORTCbits.RC2 = 0;  // Seleccionar Slave 1
-//        PORTCbits.RC1 = 1;
-//        __delay_ms(1);   
-//        spiWrite('c');
-//        cont = spiRead();
-//        PORTB = cont;
+        RA0 = 1;
         
-        
+        // Mostrar datos de ADC1 en LCD
         conver = (lecADC*5.0)/255;
         sprintf(valADC, "%.2f", conver);
         Lcd_Set_Cursor(2,1);
         Lcd_Write_String(valADC);
         
+        //Lectura de ADC2
+        __delay_ms(20);
         
-//        sprintf(contador, "%.2f", cont);
-//        Lcd_Set_Cursor(2,7);
-//        Lcd_Write_String(contador);
+        RA1 = 0;
+        spiWrite(0);
+        while(!SSPSTATbits.BF);
+        lecADC2 = spiRead();
+        __delay_ms(10);
+        RA1 = 1;
         
-        conver = (lecADC2*5.0)/255;
-        sprintf(valADC, "%.2f", conver);
-        Lcd_Set_Cursor(2,13);
-        Lcd_Write_String(valADC);
+       
+        __delay_ms(1);
+        
+        // Mostrar datos de ADC2 en LCD
+        conver1 = (lecADC2*5.0)/255;
+        sprintf(valADC2, "%.2f", conver1);
+        Lcd_Set_Cursor(2,12);
+        Lcd_Write_String(valADC2);
         
     }
 }
@@ -104,15 +139,15 @@ void main(void) {
 void portsetup(){
     ANSEL = 0;
     ANSELH = 0;
-    TRISD = 0;
+    TRISD = 0;  // Puerto para LCD
     PORTD = 0;
-    TRISB = 0;
+    TRISB = 0;  // Puerto auxiliar
     PORTB = 0;
-
-    TRISC = 0;
-    TRISCbits.TRISC4 = 1;
-    PORTCbits.RC2 = 1;  // Seleccionar Slave 1
-    PORTCbits.RC1 = 1;
+    TRISA = 0;  // Puerto para SS
+    PORTA = 0;
+//    TRISC4 = 1;
+    PORTAbits.RA0 = 1;  // Deseleccionar esclavos
+    PORTAbits.RA1 = 1;
     spiInit(SPI_MASTER_OSC_DIV4, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
 
 }

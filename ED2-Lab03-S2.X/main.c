@@ -40,7 +40,7 @@
 #include "oscilador.h"
 #include "setupADC.h"
 
-#define _XTAL_FREQ 4000000
+#define _XTAL_FREQ 2000000
 
 void portsetup(void);
 
@@ -57,7 +57,7 @@ void __interrupt() isr (void){
 }
     
 void main(void) {
-    setupINTOSC(6);     // Oscilador a 4MHz
+    setupINTOSC(5);     // Oscilador a 4MHz
     portsetup();
     ADC_config(0x01);   // Configurar canal analógico 0
             
