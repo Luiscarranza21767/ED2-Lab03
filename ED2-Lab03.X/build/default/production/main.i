@@ -2863,48 +2863,43 @@ void main(void) {
     Lcd_Init();
     Lcd_Clear();
     Lcd_Set_Cursor(1,2);
-    Lcd_Write_String("S1:  S2:  S3:");
+    Lcd_Write_String("S1:   S2:  CON");
     Lcd_Set_Cursor(2,1);
-    Lcd_Write_String("    V          V");
+    Lcd_Write_String("    V     V  ");
     SSPBUF = 0;
 
     while(1){
-        _delay((unsigned long)((20)*(2000000/4000.0)));
+        _delay((unsigned long)((10)*(2000000/4000.0)));
         RA0 = 1;
-
         _delay((unsigned long)((10)*(2000000/4000.0)));
 
+
         RA0 = 0;
-
         spiWrite(1);
-
         while(!SSPSTATbits.BF);
-
         cont = SSPBUF;
         RA0 = 1;
 
+
         cent = inttochar(descomponer(2, cont));
-        Lcd_Set_Cursor(2,7);
+        Lcd_Set_Cursor(2,13);
         Lcd_Write_Char(cent);
         dec = inttochar(descomponer(1, cont));
-        Lcd_Set_Cursor(2,8);
+        Lcd_Set_Cursor(2,14);
         Lcd_Write_Char(dec);
         uni = inttochar(descomponer(0, cont));
-        Lcd_Set_Cursor(2,9);
+        Lcd_Set_Cursor(2,15);
         Lcd_Write_Char(uni);
 
 
-        _delay((unsigned long)((20)*(2000000/4000.0)));
+        _delay((unsigned long)((10)*(2000000/4000.0)));
 
         RA0 = 0;
         spiWrite(0);
 
         while(!SSPSTATbits.BF);
-
-
         lecADC = SSPBUF;
         _delay((unsigned long)((10)*(2000000/4000.0)));
-
         RA0 = 1;
 
 
@@ -2914,22 +2909,19 @@ void main(void) {
         Lcd_Write_String(valADC);
 
 
-        _delay((unsigned long)((20)*(2000000/4000.0)));
-
+        _delay((unsigned long)((10)*(2000000/4000.0)));
         RA1 = 0;
         spiWrite(0);
         while(!SSPSTATbits.BF);
         lecADC2 = spiRead();
         _delay((unsigned long)((10)*(2000000/4000.0)));
         RA1 = 1;
-
-
         _delay((unsigned long)((1)*(2000000/4000.0)));
 
 
         conver1 = (lecADC2*5.0)/255;
         sprintf(valADC2, "%.2f", conver1);
-        Lcd_Set_Cursor(2,12);
+        Lcd_Set_Cursor(2,7);
         Lcd_Write_String(valADC2);
 
     }
@@ -2944,7 +2936,6 @@ void portsetup(){
     PORTB = 0;
     TRISA = 0;
     PORTA = 0;
-
     PORTAbits.RA0 = 1;
     PORTAbits.RA1 = 1;
     spiInit(SPI_MASTER_OSC_DIV4, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);

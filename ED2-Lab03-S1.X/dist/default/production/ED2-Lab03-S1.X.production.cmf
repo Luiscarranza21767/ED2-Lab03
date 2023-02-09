@@ -29,7 +29,7 @@ cstackBANK0 BANK0 1 20 20 6 1 1
 intentry CODE 0 4 4 8 2 1
 bssCOMMON COMMON 1 76 76 3 1 1
 config CONFIG 4 2007 2007 2 2 1
-$C:\Users\Pablo\AppData\Local\Temp\xcAsm28.o
+$C:\Users\Pablo\AppData\Local\Temp\xcAsh9c.o
 idloc IDLOC 5 2000 2000 4 2 1
 reset_vec CODE 0 0 0 3 2 1
 end_init CODE 0 C C 3 2 1
@@ -78,14 +78,14 @@ STRING 1DB-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\ED2-Lab03-S1.X.production.o
-F cinit CODE >1125:C:\Users\Pablo\AppData\Local\Temp\xcAsm28.s
-F cinit CODE >1128:C:\Users\Pablo\AppData\Local\Temp\xcAsm28.s
-F cinit CODE >1145:C:\Users\Pablo\AppData\Local\Temp\xcAsm28.s
-10 cinit CODE >1146:C:\Users\Pablo\AppData\Local\Temp\xcAsm28.s
-11 cinit CODE >1147:C:\Users\Pablo\AppData\Local\Temp\xcAsm28.s
-12 cinit CODE >1153:C:\Users\Pablo\AppData\Local\Temp\xcAsm28.s
-12 cinit CODE >1155:C:\Users\Pablo\AppData\Local\Temp\xcAsm28.s
-13 cinit CODE >1156:C:\Users\Pablo\AppData\Local\Temp\xcAsm28.s
+F cinit CODE >1125:C:\Users\Pablo\AppData\Local\Temp\xcAsh9c.s
+F cinit CODE >1128:C:\Users\Pablo\AppData\Local\Temp\xcAsh9c.s
+F cinit CODE >1145:C:\Users\Pablo\AppData\Local\Temp\xcAsh9c.s
+10 cinit CODE >1146:C:\Users\Pablo\AppData\Local\Temp\xcAsh9c.s
+11 cinit CODE >1147:C:\Users\Pablo\AppData\Local\Temp\xcAsh9c.s
+12 cinit CODE >1153:C:\Users\Pablo\AppData\Local\Temp\xcAsh9c.s
+12 cinit CODE >1155:C:\Users\Pablo\AppData\Local\Temp\xcAsh9c.s
+13 cinit CODE >1156:C:\Users\Pablo\AppData\Local\Temp\xcAsh9c.s
 4 intentry CODE >58:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\main.c
 1D4 text9 CODE >29:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\SPI.c
 1D4 text9 CODE >31:D:\Backup\Documentos\GitHub\ED2-Lab03\ED2-Lab03-S1.X\SPI.c
@@ -244,20 +244,20 @@ _ADIF 66 0 ABS 0 - dist/default/production\ED2-Lab03-S1.X.production.o
 _IOCB 96 0 ABS 0 - dist/default/production\ED2-Lab03-S1.X.production.o
 _RBIF 58 0 ABS 0 - dist/default/production\ED2-Lab03-S1.X.production.o
 _WPUB 95 0 ABS 0 - dist/default/production\ED2-Lab03-S1.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\Pablo\AppData\Local\Temp\xcAsm28.o
+___sp 0 0 STACK 2 stack C:\Users\Pablo\AppData\Local\Temp\xcAsh9c.o
 _cont 77 0 COMMON 1 bssCOMMON dist/default/production\ED2-Lab03-S1.X.production.o
 _main 230 0 CODE 0 maintext dist/default/production\ED2-Lab03-S1.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\ED2-Lab03-S1.X.production.o
-start 18 0 CODE 0 init C:\Users\Pablo\AppData\Local\Temp\xcAsm28.o
+start 18 0 CODE 0 init C:\Users\Pablo\AppData\Local\Temp\xcAsh9c.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 _OPTION_REGbits 81 0 ABS 0 - dist/default/production\ED2-Lab03-S1.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAsm28.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAsm28.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAsm28.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAsm28.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAsm28.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAsm28.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAsh9c.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAsh9c.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAsh9c.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAsh9c.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAsh9c.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Pablo\AppData\Local\Temp\xcAsh9c.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 _setupINTOSC 2C 0 CODE 0 text2 dist/default/production\ED2-Lab03-S1.X.production.o
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\ED2-Lab03-S1.X.production.o
@@ -269,8 +269,8 @@ _ADRESH 1E 0 ABS 0 - dist/default/production\ED2-Lab03-S1.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
 _ADC_read EA 0 CODE 0 text5 dist/default/production\ED2-Lab03-S1.X.production.o
 __end_of_ADC_read 194 0 CODE 0 text5 dist/default/production\ED2-Lab03-S1.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\Pablo\AppData\Local\Temp\xcAsm28.o
-___stacklo 0 0 ABS 0 - C:\Users\Pablo\AppData\Local\Temp\xcAsm28.o
+___stackhi 0 0 ABS 0 - C:\Users\Pablo\AppData\Local\Temp\xcAsh9c.o
+___stacklo 0 0 ABS 0 - C:\Users\Pablo\AppData\Local\Temp\xcAsh9c.o
 spiInit@sDataSample 20 0 BANK0 1 cstackBANK0 dist/default/production\ED2-Lab03-S1.X.production.o
 start_initialization 1E 0 CODE 0 cinit dist/default/production\ED2-Lab03-S1.X.production.o
 _TRISAbits 85 0 ABS 0 - dist/default/production\ED2-Lab03-S1.X.production.o
@@ -280,7 +280,7 @@ _SSPBUF 13 0 ABS 0 - dist/default/production\ED2-Lab03-S1.X.production.o
 _SSPCON 14 0 ABS 0 - dist/default/production\ED2-Lab03-S1.X.production.o
 _TRISC3 43B 0 ABS 0 - dist/default/production\ED2-Lab03-S1.X.production.o
 _TRISC5 43D 0 ABS 0 - dist/default/production\ED2-Lab03-S1.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\Pablo\AppData\Local\Temp\xcAsm28.o
+___int_sp 0 0 STACK 2 stack C:\Users\Pablo\AppData\Local\Temp\xcAsh9c.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -340,7 +340,7 @@ saved_w 7E 0 ABS 0 - dist/default/production\ED2-Lab03-S1.X.production.o
 __end_of_setupINTOSC EA 0 CODE 0 text2 dist/default/production\ED2-Lab03-S1.X.production.o
 __end_of_isr 230 0 CODE 0 text7 dist/default/production\ED2-Lab03-S1.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Pablo\AppData\Local\Temp\xcAsm28.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Pablo\AppData\Local\Temp\xcAsh9c.o
 _lecADC 78 0 COMMON 1 bssCOMMON dist/default/production\ED2-Lab03-S1.X.production.o
 _PIE1bits 8C 0 ABS 0 - dist/default/production\ED2-Lab03-S1.X.production.o
 __pmaintext 230 0 CODE 0 maintext dist/default/production\ED2-Lab03-S1.X.production.o

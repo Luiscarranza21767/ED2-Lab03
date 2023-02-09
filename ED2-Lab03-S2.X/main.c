@@ -57,7 +57,7 @@ void __interrupt() isr (void){
 }
     
 void main(void) {
-    setupINTOSC(5);     // Oscilador a 4MHz
+    setupINTOSC(5);     // Oscilador a 2MHz
     portsetup();
     ADC_config(0x01);   // Configurar canal analógico 0
             
